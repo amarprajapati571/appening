@@ -1,0 +1,196 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Appening",
+		"_postman_id": "9bf046ba-6b24-12df-84fb-621b5d3e4dbe",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"url": "http://localhost:8000/api/user/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Amar\",\r\n    \"email\":\"amarprajapati5719@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"password_confirmation\":\"123456\",\r\n    \"user_type\":\"admin\"\r\n    \r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"url": "http://localhost:8000/api/user/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"amarprajapati571@gmail.com\",\r\n    \"password\":\"123456\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Change User Password",
+			"request": {
+				"url": "http://localhost:8000/api/user/changepassword",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmM0NDBlZjI4YzlmMDE2Y2IzYmI0YzkiLCJpYXQiOjE2NTcwMjg4NDcsImV4cCI6MTY1NzQ2MDg0N30.wAjboiF3pr6dKpri-hMegXFljCQoOzMoh_mSN7_8iKo",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"hello\",\r\n    \"password_confirmation\":\"hello\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Logged User Detail",
+			"request": {
+				"url": "http://localhost:8000/api/user/loggeduser",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmM0NDBlZjI4YzlmMDE2Y2IzYmI0YzkiLCJpYXQiOjE2NTcwMjg4NDcsImV4cCI6MTY1NzQ2MDg0N30.wAjboiF3pr6dKpri-hMegXFljCQoOzMoh_mSN7_8iKo",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Send Password Reset Email",
+			"request": {
+				"url": "http://localhost:8000/api/user/send-reset-password-email",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"amarprajapati571@gmail.com\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Password Reset",
+			"request": {
+				"url": "http://localhost:8000/api/user/reset-password/62174841cdb6040f1e67283f/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MjE3NDg0MWNkYjYwNDBmMWU2NzI4M2YiLCJpYXQiOjE2NDU2OTMxNzgsImV4cCI6MTY0NTY5NDA3OH0.XcuRC6ZY-eEk0e2Is4xwcmrKSyVugRaEmLCwyolre3E",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"12345678\",\r\n    \"password_confirmation\":\"12345678\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "User list",
+			"request": {
+				"url": "http://localhost:8000/api/user/user-list",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmM0NDYyZmVkNzlhMGIwZmJmN2Y5NTciLCJpYXQiOjE2NTcwMzAxOTEsImV4cCI6MTY1NzQ2MjE5MX0.1yPtUQCrlUVCCwSjBEi0oyngeyzUlESuGP_jOrtV52Q",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "isAnagram",
+			"request": {
+				"url": "http://localhost:8000/api/user/isAnagram",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"str1\":\"appening\",\n\t\"str2\":\"ginenapp\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
